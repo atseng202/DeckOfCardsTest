@@ -55,37 +55,6 @@ class InitialViewController: UIViewController {
 }
 
 
-extension DeckViewModel: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return suitSections[section].cardViewModels.count
-//        if section == 0 { return self.clubs.count }
-//        if section == 1 { return self.hearts.count }
-//        if section == 2 { return self.spades.count }
-//        else { return self.diamonds.count }
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cardViewModelSection = suitSections[indexPath.section]
-        let cardViewModel = cardViewModelSection.cardViewModels[indexPath.row]
-
-        let cell = tableView.dequeueReusableCell(withIdentifier: CardTableViewCell.Identifier, for: indexPath) as! CardTableViewCell
-        cell.cardViewModel = cardViewModel
-        return cell
-    }
-
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return suitSections.count
-    }
-
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return suitSections[section].sectionTitle
-    }
-
-}
-
-extension DeckViewModel: UITableViewDelegate {
-
-}
 
 
 
