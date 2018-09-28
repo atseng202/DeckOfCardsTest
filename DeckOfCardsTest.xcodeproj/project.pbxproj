@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3F5F8CB5215D967C0010A68D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5F8CB4215D967C0010A68D /* AppDelegate.swift */; };
-		3F5F8CB7215D967C0010A68D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5F8CB6215D967C0010A68D /* ViewController.swift */; };
+		3F5F8CB7215D967C0010A68D /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5F8CB6215D967C0010A68D /* InitialViewController.swift */; };
 		3F5F8CBA215D967C0010A68D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F5F8CB8215D967C0010A68D /* Main.storyboard */; };
 		3F5F8CBC215D967D0010A68D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F5F8CBB215D967D0010A68D /* Assets.xcassets */; };
 		3F5F8CBF215D967D0010A68D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F5F8CBD215D967D0010A68D /* LaunchScreen.storyboard */; };
@@ -18,6 +18,12 @@
 		3F5F8CDE215DB8A80010A68D /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5F8CDD215DB8A80010A68D /* Deck.swift */; };
 		3F5F8CE0215DB9660010A68D /* DataService+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5F8CDF215DB9660010A68D /* DataService+Constants.swift */; };
 		3F5F8CE4215DC6D10010A68D /* DeckViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5F8CE3215DC6D10010A68D /* DeckViewModel.swift */; };
+		3F5F8CE6215DC9D80010A68D /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5F8CE5215DC9D80010A68D /* CardViewModel.swift */; };
+		3F5F8CE8215DD7490010A68D /* Deck+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5F8CE7215DD7490010A68D /* Deck+Constants.swift */; };
+		3F5F8CEA215DE4F00010A68D /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5F8CE9215DE4F00010A68D /* CardTableViewCell.swift */; };
+		3F5F8CEC215DE64F0010A68D /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5F8CEB215DE64F0010A68D /* CustomImageView.swift */; };
+		3F5F8CEF215DE6AF0010A68D /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5F8CEE215DE6AF0010A68D /* ImageCache.swift */; };
+		3F5F8CF2215DE95A0010A68D /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5F8CF1215DE95A0010A68D /* UIView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +39,7 @@
 /* Begin PBXFileReference section */
 		3F5F8CB1215D967C0010A68D /* DeckOfCardsTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeckOfCardsTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F5F8CB4215D967C0010A68D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3F5F8CB6215D967C0010A68D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3F5F8CB6215D967C0010A68D /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		3F5F8CB9215D967C0010A68D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F5F8CBB215D967D0010A68D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F5F8CBE215D967D0010A68D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -46,6 +52,12 @@
 		3F5F8CDD215DB8A80010A68D /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		3F5F8CDF215DB9660010A68D /* DataService+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataService+Constants.swift"; sourceTree = "<group>"; };
 		3F5F8CE3215DC6D10010A68D /* DeckViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckViewModel.swift; sourceTree = "<group>"; };
+		3F5F8CE5215DC9D80010A68D /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
+		3F5F8CE7215DD7490010A68D /* Deck+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Deck+Constants.swift"; sourceTree = "<group>"; };
+		3F5F8CE9215DE4F00010A68D /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
+		3F5F8CEB215DE64F0010A68D /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
+		3F5F8CEE215DE6AF0010A68D /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		3F5F8CF1215DE95A0010A68D /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +99,8 @@
 		3F5F8CB3215D967C0010A68D /* DeckOfCardsTest */ = {
 			isa = PBXGroup;
 			children = (
+				3F5F8CF0215DE92C0010A68D /* Extensions */,
+				3F5F8CED215DE6A30010A68D /* Utilities */,
 				3F5F8CD8215DAB0C0010A68D /* View Models */,
 				3F5F8CD7215DAB060010A68D /* Models */,
 				3F5F8CD6215DAAFD0010A68D /* Views */,
@@ -122,7 +136,7 @@
 		3F5F8CD5215DAAF60010A68D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				3F5F8CB6215D967C0010A68D /* ViewController.swift */,
+				3F5F8CB6215D967C0010A68D /* InitialViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -130,6 +144,9 @@
 		3F5F8CD6215DAAFD0010A68D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3F5F8CE9215DE4F00010A68D /* CardTableViewCell.swift */,
+				3F5F8CEB215DE64F0010A68D /* CustomImageView.swift */,
+				3F5F8CF1215DE95A0010A68D /* UIView+Extensions.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -139,6 +156,7 @@
 			children = (
 				3F5F8CDB215DB50F0010A68D /* DeckID.swift */,
 				3F5F8CDD215DB8A80010A68D /* Deck.swift */,
+				3F5F8CE7215DD7490010A68D /* Deck+Constants.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -147,8 +165,24 @@
 			isa = PBXGroup;
 			children = (
 				3F5F8CE3215DC6D10010A68D /* DeckViewModel.swift */,
+				3F5F8CE5215DC9D80010A68D /* CardViewModel.swift */,
 			);
 			path = "View Models";
+			sourceTree = "<group>";
+		};
+		3F5F8CED215DE6A30010A68D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3F5F8CEE215DE6AF0010A68D /* ImageCache.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		3F5F8CF0215DE92C0010A68D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,10 +286,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F5F8CE8215DD7490010A68D /* Deck+Constants.swift in Sources */,
 				3F5F8CDA215DAB2C0010A68D /* DataService.swift in Sources */,
-				3F5F8CB7215D967C0010A68D /* ViewController.swift in Sources */,
+				3F5F8CB7215D967C0010A68D /* InitialViewController.swift in Sources */,
 				3F5F8CDE215DB8A80010A68D /* Deck.swift in Sources */,
 				3F5F8CE0215DB9660010A68D /* DataService+Constants.swift in Sources */,
+				3F5F8CF2215DE95A0010A68D /* UIView+Extensions.swift in Sources */,
+				3F5F8CEA215DE4F00010A68D /* CardTableViewCell.swift in Sources */,
+				3F5F8CEF215DE6AF0010A68D /* ImageCache.swift in Sources */,
+				3F5F8CE6215DC9D80010A68D /* CardViewModel.swift in Sources */,
+				3F5F8CEC215DE64F0010A68D /* CustomImageView.swift in Sources */,
 				3F5F8CB5215D967C0010A68D /* AppDelegate.swift in Sources */,
 				3F5F8CE4215DC6D10010A68D /* DeckViewModel.swift in Sources */,
 				3F5F8CDC215DB50F0010A68D /* DeckID.swift in Sources */,
