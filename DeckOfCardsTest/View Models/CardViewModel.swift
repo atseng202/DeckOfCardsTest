@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class CardViewModel: Comparable {
+class CardViewModel: NSObject, Comparable {
     static func < (lhs: CardViewModel, rhs: CardViewModel) -> Bool {
         return lhs.intValue < rhs.intValue
     }
@@ -22,6 +22,7 @@ class CardViewModel: Comparable {
     let value: String
     let imageUrl: String
     private let intValue: Int
+    @objc dynamic var tappedCount = 0 
 
     init(card: Card) {
         self.suit = card.suit

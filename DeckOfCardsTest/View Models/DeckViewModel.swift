@@ -9,9 +9,14 @@
 import Foundation
 import UIKit
 
-protocol CardViewModelSection {
-    var sectionTitle: String { get }
-    var cardViewModels: [CardViewModel] { get }
+class CardViewModelSection: NSObject {
+    var sectionTitle: String
+    var cardViewModels: [CardViewModel]
+
+    init(sectionTitle: String, cardViewModels: [CardViewModel]) {
+        self.sectionTitle = sectionTitle
+        self.cardViewModels = cardViewModels
+    }
 }
 
 class DeckViewModel: NSObject {
@@ -38,49 +43,53 @@ class DeckViewModel: NSObject {
         spades.sort { $0 < $1 }
         diamonds.sort { $0 < $1 }
 
-        suitSections.append(DeckViewModelClubCards(clubCardViewModels: clubs))
-        suitSections.append(DeckViewModelHeartCards(heartCardViewModels: hearts))
-        suitSections.append(DeckViewModelSpadeCards(spadeCardViewModels: spades))
-        suitSections.append(DeckViewModelDiamondCards(diamondCardViewModels: diamonds))
+        suitSections.append(CardViewModelSection(sectionTitle: Deck.Constants.Clubs, cardViewModels: clubs))
+        suitSections.append(CardViewModelSection(sectionTitle: Deck.Constants.Hearts, cardViewModels: hearts))
+        suitSections.append(CardViewModelSection(sectionTitle: Deck.Constants.Spades, cardViewModels: spades))
+        suitSections.append(CardViewModelSection(sectionTitle: Deck.Constants.Diamonds, cardViewModels: diamonds))
+//        suitSections.append(DeckViewModelClubCards(clubCardViewModels: clubs))
+//        suitSections.append(DeckViewModelHeartCards(heartCardViewModels: hearts))
+//        suitSections.append(DeckViewModelSpadeCards(spadeCardViewModels: spades))
+//        suitSections.append(DeckViewModelDiamondCards(diamondCardViewModels: diamonds))
     }
 }
 
-class DeckViewModelClubCards: CardViewModelSection {
-    var sectionTitle: String { return Deck.Constants.Clubs }
-
-    var cardViewModels: [CardViewModel]
-
-    init(clubCardViewModels: [CardViewModel]) {
-        self.cardViewModels = clubCardViewModels
-    }
-}
-
-class DeckViewModelHeartCards: CardViewModelSection {
-    var sectionTitle: String { return Deck.Constants.Hearts }
-
-    var cardViewModels: [CardViewModel]
-
-    init(heartCardViewModels: [CardViewModel]) {
-        self.cardViewModels = heartCardViewModels
-    }
-}
-
-class DeckViewModelSpadeCards: CardViewModelSection {
-    var sectionTitle: String { return Deck.Constants.Spades }
-
-    var cardViewModels: [CardViewModel]
-
-    init(spadeCardViewModels: [CardViewModel]) {
-        self.cardViewModels = spadeCardViewModels
-    }
-}
-
-class DeckViewModelDiamondCards: CardViewModelSection {
-    var sectionTitle: String { return Deck.Constants.Diamonds }
-
-    var cardViewModels: [CardViewModel]
-
-    init(diamondCardViewModels: [CardViewModel]) {
-        self.cardViewModels = diamondCardViewModels
-    }
-}
+//class DeckViewModelClubCards: NSObject, CardViewModelSection {
+//    var sectionTitle: String { return Deck.Constants.Clubs }
+//
+//    @objc dynamic var cardViewModels: [CardViewModel]
+//
+//    init(clubCardViewModels: [CardViewModel]) {
+//        self.cardViewModels = clubCardViewModels
+//    }
+//}
+//
+//class DeckViewModelHeartCards: NSObject, CardViewModelSection {
+//    var sectionTitle: String { return Deck.Constants.Hearts }
+//
+//    @objc dynamic var cardViewModels: [CardViewModel]
+//
+//    init(heartCardViewModels: [CardViewModel]) {
+//        self.cardViewModels = heartCardViewModels
+//    }
+//}
+//
+//class DeckViewModelSpadeCards: NSObject, CardViewModelSection {
+//    var sectionTitle: String { return Deck.Constants.Spades }
+//
+//    @objc dynamic var cardViewModels: [CardViewModel]
+//
+//    init(spadeCardViewModels: [CardViewModel]) {
+//        self.cardViewModels = spadeCardViewModels
+//    }
+//}
+//
+//class DeckViewModelDiamondCards: NSObject, CardViewModelSection {
+//    var sectionTitle: String { return Deck.Constants.Diamonds }
+//
+//    @objc dynamic var cardViewModels: [CardViewModel]
+//
+//    init(diamondCardViewModels: [CardViewModel]) {
+//        self.cardViewModels = diamondCardViewModels
+//    }
+//}

@@ -18,40 +18,73 @@ class InitialViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = UIColor.magenta
-        navigationItem.title = "Deck of Cards"
+        initView()
 
+        setupViewModel()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+
+    func initView() {
+        view.backgroundColor = UIColor.white
+        navigationItem.title = "Deck of Cards"
         setupTableView()
+    }
+    private func setupTableView() {
+        tableView = UITableView(frame: view.frame, style: .plain)
+        guard tableView != nil else { return }
+        tableView.estimatedRowHeight = 40
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.register(CardTableViewCell.self, forCellReuseIdentifier: CardTableViewCell.Identifier)
-        
+        view = tableView
+    }
+
+    func setupViewModel() {
         DataService.shared.fetchFullDeck { [weak self] (deck, error) in
             if let deck = deck {
-                for card in deck.cards {
-                    print("\(card.value) of \(card.suit)")
-                }
                 DispatchQueue.main.async {
                     self?.deckViewModel = DeckViewModel(deck: deck)
-                    self?.tableView.delegate = self?.deckViewModel
+                    self?.tableView.delegate = self
                     self?.tableView.dataSource = self?.deckViewModel
                     self?.tableView.reloadData()
-
-                    guard let self = self else { return }
-                    for section in self.deckViewModel!.suitSections {
-                        print("# of cards in this section: ", section.cardViewModels.count)
-                    }
                 }
-
-
             }
         }
     }
 
-    private func setupTableView() {
-        tableView = UITableView(frame: view.frame, style: .plain)
-        guard tableView != nil else { return }
+}
+extension InitialViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let viewModel = deckViewModel else { return }
+        let cardViewModelSection = viewModel.suitSections[indexPath.section]
+        let cardViewModel = cardViewModelSection.cardViewModels[indexPath.row]
 
-        view = tableView
+        // Make sure the selected cell's delegate is the VC
+        let cell = tableView.cellForRow(at: indexPath) as? CardTableViewCell
+        cell?.delegate = self
+        // Update card view model tap count, triggering KVO
+        cardViewModel.tappedCount += 1
+
+        // Finally present modally the PreviewVC
+        let previewVC = PreviewViewController()
+        previewVC.cardViewModel = cardViewModel
+        let navCon = UINavigationController(rootViewController: previewVC)
+
+        present(navCon, animated: true, completion: nil)
     }
+}
+
+extension InitialViewController: CardTableViewCellDelegate {
+    func didUpdateCardViewModel(for cell: UITableViewCell) {
+        if let indexPath = tableView.indexPath(for: cell) {
+            tableView.reloadRows(at: [indexPath], with: .fade)
+            print("Reloaded rows at: \(indexPath)")
+        }
+    }
+
+
 }
 
 

@@ -8,8 +8,6 @@
 
 import UIKit
 
-var imageCache = [String: UIImage]()
-
 class CustomImageView: UIImageView {
 
     lazy var spinner: UIActivityIndicatorView = {
@@ -33,7 +31,6 @@ class CustomImageView: UIImageView {
         if let cachedImage = ImageCache.shared.image(forKey: urlString) {
             self.image = cachedImage
             spinner.stopAnimating()
-            print("Got image from imageCache")
             return
         }
 
