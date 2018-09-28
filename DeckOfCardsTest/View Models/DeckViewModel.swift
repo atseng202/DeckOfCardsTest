@@ -47,49 +47,5 @@ class DeckViewModel: NSObject {
         suitSections.append(CardViewModelSection(sectionTitle: Deck.Constants.Hearts, cardViewModels: hearts))
         suitSections.append(CardViewModelSection(sectionTitle: Deck.Constants.Spades, cardViewModels: spades))
         suitSections.append(CardViewModelSection(sectionTitle: Deck.Constants.Diamonds, cardViewModels: diamonds))
-//        suitSections.append(DeckViewModelClubCards(clubCardViewModels: clubs))
-//        suitSections.append(DeckViewModelHeartCards(heartCardViewModels: hearts))
-//        suitSections.append(DeckViewModelSpadeCards(spadeCardViewModels: spades))
-//        suitSections.append(DeckViewModelDiamondCards(diamondCardViewModels: diamonds))
     }
 }
-
-//class DeckViewModelClubCards: NSObject, CardViewModelSection {
-//    var sectionTitle: String { return Deck.Constants.Clubs }
-//
-//    @objc dynamic var cardViewModels: [CardViewModel]
-//
-//    init(clubCardViewModels: [CardViewModel]) {
-//        self.cardViewModels = clubCardViewModels
-//    }
-//}
-//
-//class DeckViewModelHeartCards: NSObject, CardViewModelSection {
-//    var sectionTitle: String { return Deck.Constants.Hearts }
-//
-//    @objc dynamic var cardViewModels: [CardViewModel]
-//
-//    init(heartCardViewModels: [CardViewModel]) {
-//        self.cardViewModels = heartCardViewModels
-//    }
-//}
-//
-//class DeckViewModelSpadeCards: NSObject, CardViewModelSection {
-//    var sectionTitle: String { return Deck.Constants.Spades }
-//
-//    @objc dynamic var cardViewModels: [CardViewModel]
-//
-//    init(spadeCardViewModels: [CardViewModel]) {
-//        self.cardViewModels = spadeCardViewModels
-//    }
-//}
-//
-//class DeckViewModelDiamondCards: NSObject, CardViewModelSection {
-//    var sectionTitle: String { return Deck.Constants.Diamonds }
-//
-//    @objc dynamic var cardViewModels: [CardViewModel]
-//
-//    init(diamondCardViewModels: [CardViewModel]) {
-//        self.cardViewModels = diamondCardViewModels
-//    }
-//}

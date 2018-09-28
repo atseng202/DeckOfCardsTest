@@ -32,19 +32,4 @@ extension DeckViewModel: UITableViewDataSource {
 
 }
 
-//extension DeckViewModel: UITableViewDelegate {
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let cardViewModelSection = suitSections[indexPath.section]
-//        let cardViewModel = cardViewModelSection.cardViewModels[indexPath.row]
-//
-//        let previewVC = PreviewViewController()
-//        previewVC.cardViewModel = cardViewModel
-//        let navCon = UINavigationController(rootViewController: previewVC)
-//
-//        if let presentingVC = tableView.parentViewController {
-//            presentingVC.present(navCon, animated: true, completion: nil)
-//        }
-//    }
-//}
-
 
